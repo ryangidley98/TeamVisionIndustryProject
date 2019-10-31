@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link href="../css/styles.css" rel="stylesheet" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+	<link href="https://cdn.shopify.com/s/files/1/0743/1033/products/r8-2_large.PNG?v=1496638644" rel="icon">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+</head>
+<body>
+	<div id="navbar">
+		<div style="float:left">
+			<button class="openbtn" onclick="openNav()">☰</button>
+		</div><a class="active" href="https://www.bendigo.vic.gov.au/">City of Greater Bendigo</a> <a href="../index.html">Pedestrian Frequency Counter</a> <i class="fas fa-bicycle fa-3x"></i> <i class="fas fa-walking fa-3x"></i>
+	</div>
+	<div class="sidebar2" id="mySidebar2">
+		<a href="../index.html"><i class="fas fa-home"></i> Home</a> 
+		<a href="./About.html"><i class="fas fa-info-circle"></i> About</a> 
+		<a class="navActive" href="./Contact.html"><i class="fas fa-at"></i> Contact</a> 
+		<a href="./FAQ.html"><i class="fas fa-question-circle"></i> Frequently Asked Questions</a>
+		<a href="./Tutorial.html"><i class="fas fa-chalkboard-teacher"></i> Help</a>
+		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+	</div>
+	<style>
+	   body {
+	    background-color: #FBF8F3;
+	   }
+	   h2 {
+	   column-span: all;
+	   }
+	</style>
+	<div id="main">
+		<img height="auto" id="contactBanner" src="../contactbanner.png" width="100%">
+		<div id="contact">
+			<div class="tablediv">
+				<table align="center" class="contactTable">
+					<tr>
+						<td>
+							<h3>Name</h3>
+						</td>
+						<td>
+							<h3>Email</h3>
+						</td>
+					</tr>
+					<tr>
+						<td>Ashley Gajic</td>
+						<td>
+							<span id="p1">19074975@students.latrobe.edu.au</span>
+							<div class="tooltip">
+								<span class="tooltiptext">Copy to clipboard</span><i class="fas fa-copy" id="copybutton" onclick="copyToClipboard('#p1')"></i>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Ryan Gidley</td>
+						<td>
+							<span id="p2">19000451@students.latrobe.edu.au</span>
+							<div class="tooltip">
+								<span class="tooltiptext">Copy to clipboard</span><i class="fas fa-copy" id="copybutton" onclick="copyToClipboard('#p2')"></i>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Nilesh Chaudhary</td>
+						<td>
+							<span id="p3">19208177@students.latrobe.edu.au</span>
+							<div class="tooltip">
+								<span class="tooltiptext">Copy to clipboard</span><i class="fas fa-copy" id="copybutton" onclick="copyToClipboard('#p3')"></i>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Qasim Chamra</td>
+						<td>
+							<span id="p4">19357747@students.latrobe.edu.au</span>
+							<div class="tooltip">
+								<span class="tooltiptext">Copy to clipboard</span><i class="fas fa-copy" id="copybutton" onclick="copyToClipboard('#p4')"></i>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>Prahar Dosani</td>
+						<td>
+							<span id="p5">18860849@students.latrobe.edu.au</span>
+							<div class="tooltip">
+								<span class="tooltiptext">Copy to clipboard</span><i class="fas fa-copy" id="copybutton" onclick="copyToClipboard('#p5')"></i>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		Copyright © 2019 Team Vision
+	</div>
+	<script src="../js/sidebar.js">
+	</script>
+</body>
+</html>

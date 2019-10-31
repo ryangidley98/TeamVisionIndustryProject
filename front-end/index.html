@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bendigo Frequency Counter</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+	<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+	<link href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" rel="stylesheet">
+	<link href="https://cdn.shopify.com/s/files/1/0743/1033/products/r8-2_large.PNG?v=1496638644" rel="icon">
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js">
+	</script>
+	<link href="sidebar/L.Control.Sidebar.css" rel="stylesheet">
+	<script src="sidebar/L.Control.Sidebar.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.5/date_fns.min.js">
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js">
+	</script>
+	<link href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css" rel="stylesheet" type="text/css">
+	<link href="legend/L.Control.Base64Legend.css" rel="stylesheet">
+	<script src="legend/L.Control.Base64Legend-min.js">
+	</script>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src='/js/lib/mootools-core-1.4.5-nocompat.js' type='text/javascript'>
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+	<script src="/path/to/js.cookie.mjs" type="module">
+	</script>
+	<script type="module">
+	 import Cookies from '/path/to/js.cookie.mjs'
+
+	 Cookies.set('foo', 'bar')
+	</script>
+	<script src="js/datafetch.js">
+	</script>
+</head>
+<body>
+	<div id="navbar">
+		<div style="float:left">
+			<button class="openbtn" onclick="openNav()">☰</button>
+		</div><a class="active" href="https://www.bendigo.vic.gov.au/">City of Greater Bendigo</a> 
+		<a href="./index.html">Pedestrian Frequency Counter</a> 
+		<i class="fas fa-bicycle fa-3x"></i> 
+		<i class="fas fa-walking fa-3x"></i>
+	</div>
+	<div class='popup'>
+		<div class='cnt223'>
+			<h1>Getting started...</h1>
+			<p>Click the pins on the map to view sensor data!<br>
+			<br>
+			<img src="./helpgif.gif"><br>
+			<br>
+			<a class='close' href=''>Close</a></p>
+			<p></p>
+		</div>
+	</div>
+	<div class="sidebar2" id="mySidebar2">
+		<a class="navActive" href="./index.html"><i class="fas fa-home"></i> Home</a> 
+		<a href="navbar_links/About.html"><i class="fas fa-info-circle"></i> About</a> 
+		<a href="navbar_links/Contact.html"><i class="fas fa-at"></i> Contact</a> 
+		<a href="navbar_links/FAQ.html"><i class="fas fa-question-circle"></i> Frequently Asked Questions</a>
+		<a href="navbar_links/Tutorial.html"><i class="fas fa-chalkboard-teacher"></i> Help</a>
+		<a class="closebtn" href="javascript:void(0)" onclick="closeNav()">×</a>
+	</div>
+	<div id="bendigoMap"></div>
+	<div id="sidebar">
+		<div id="title-header">
+			<i class="material-icons" style="float:left">person_outline</i> <span id="pedestrian-count" style="float:left"></span> <i class="material-icons" style="float:left">directions_bike</i> <span id="cyclist-count" style="float:left"></span><br>
+			<div id="title"></div>
+		</div>
+		<canvas height="200px" id="myChart" width="200px"></canvas>
+		<div align="center" id="buttons">
+			<button id="left-right" onclick="bothGraph(date,pinId)">&nbsp;Left & Right&nbsp;</button> <button id="left" onclick="leftGraph(date,pinId)">&nbsp;Left&nbsp;</button> <button id="right" onclick="rightGraph(date,pinId)">&nbsp;Right&nbsp;</button>
+		</div>
+		<div id="explanation">
+			The above diagram shows the hourly pedestrian and cyclist count over the day for the sesnor. The buttons filter the direction of the passing pedestrian & cyclist
+		</div>
+		<div id="additional-data">
+			Direction Total Frequency
+		</div>
+		<table align="center" id="table"></table>
+		<div id="day-selector">
+			Day Selector
+		</div>
+		<div id="explanation">
+			View data from different days provided by the calendar below
+		</div><button id="datepicker" type="button"><i class="material-icons">date_range</i></button>
+	</div>
+	<div class="footer">
+		Copyright © 2019 Team Vision
+	</div>
+	<script src="js/mainpage.js">
+	</script>
+</body>
+</html>
